@@ -21,7 +21,7 @@ Implements simpson's extended integration rule.}
 
 Simpson's extended numerical integration rule is implemented for \eqn{n+1} equally spaced subdivisions (where \eqn{n} is even) of \eqn{[a, b]} as
 
-\deqn{\int_{a}^{b} f(x)*dx = (h/3)*[f(a) + 4f(x_1) + 2f(x_2) + 4f(x_3) + 2f(x_4) + ... + 4f(x_{n-1}) + f(b)]}
+\deqn{\int_{a}^{b} f(x)\, dx = \frac{h}{3} \left \{ f(a) + 4f(x_1) + 2f(x_2) + 4f(x_3) + 2f(x_4) + ... + 4f(x_{n-1}) + f(b)\right \}}
 
 
 where \eqn{hx=(b-a)/n} and \eqn{x_i=a+ihx}. Simpson's rule will return an exact result when the polynomial in question has a degree of three or less. For other functions, Simpson's Rule only gives an approximation.

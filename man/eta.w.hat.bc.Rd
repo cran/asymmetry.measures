@@ -5,7 +5,7 @@
 \title{Asymmetry coefficient \eqn{\hat{\eta}} using boundary correction}
 
 \description{
-Implements the asymmetry coefficient \eqn{\hat{\eta}} of \href{https://link.springer.com/article/10.1007/s00362-011-0401-6}{Patil, Patil and Bagkavos (2012)}.}
+Implements the asymmetry coefficient \eqn{\hat{\eta}} of \href{https://link.springer.com/article/10.1007/s00362-011-0401-6}{Patil, Patil and Bagkavos (2012)}}
 
 \usage{
   eta.w.hat.bc(xin, kfun)
@@ -17,12 +17,12 @@ Implements the asymmetry coefficient \eqn{\hat{\eta}} of \href{https://link.spri
 }
 
 \details{
-Given a sample \eqn{X_1, X_2, . . . , X_n} from a continuous density function \eqn{f(x)} and distribution function \eqn{F(x)}. \eqn{\hat{\eta}} is defined by   \deqn{\hat{\eta}=-\frac{\sum^{n}_{i=1}{U_i*V_i}-n*\bar{U}*\bar{V}}{\sqrt{(\sum^{n}_{i=1}{U_i^2-n*\bar{U^2}})(\sum^{n}_{i=1}{V_i^2-n*\bar{V^2}})}}}
+Given a sample \eqn{X_1, X_2, \dots, X_n} from a continuous density function \eqn{f(x)} and distribution function \eqn{F(x)},  \eqn{\hat{\eta}} is defined by
+\deqn{\hat{\eta}=-\frac{\sum_{i=1}^{n} {U_i V_i}-n\bar{U}\bar{V}}{\sqrt{(\sum_{i=1}^n{U_i^2-n\bar{U^2}})(\sum_{i=1}^n {V_i^2-n\bar{V^2}})}}}
 
   where
 
-  \eqn{U_i = \hat{f}(X_i)}, \eqn{V_i =\hat{F}(X_i)}, \eqn{\bar{U}=\sum^{n}_{i=1}{\frac{U_i}{n}}}
-  and \eqn{\bar{V}=\sum^{n}_{i=1}{\frac{V_i}{n}}}.
+  \deqn{U_i = \hat{f}(X_i), \; V_i =\hat{F}(X_i), \; \bar{U}=n^{-1}\sum_{i=1}^n  U_i, \; \bar{V}=n^{-1}\sum_{i=1}^n V_i.}
 
 \code{eta.w.hat.bc} uses reflection to correct the boundary bias issue of the kernel estimate \code{kde}.
 }
@@ -34,13 +34,13 @@ Given a sample \eqn{X_1, X_2, . . . , X_n} from a continuous density function \e
 
 
 \references{
-   \href{https://link.springer.com/article/10.1007/s00362-011-0401-6}{Patil, Patil and Bagkavos (2012): A measure of asymmetry}
+   \href{https://link.springer.com/article/10.1007/s00362-011-0401-6}{Patil, P.N., Patil, P.P. and Bagkavos, D., (2012), A measure of asymmetry. Stat. Papers, 53, 971-985.}
     }
 
 \author{
   Dimitrios Bagkavos and Lucia Gamez Gallardo
 
-  R implementation and documentation: Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com> , Lucia Gamez Gallardo <gamezgallardolucia@gmail.com>
+  R implementation and documentation: Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com>, Lucia Gamez Gallardo <gamezgallardolucia@gmail.com>
 }
 
 %\note{

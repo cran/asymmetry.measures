@@ -22,7 +22,8 @@
 \details{
   Implements the quantity:
 
-    \deqn{\rho_p=(2\sqrt(3)/p)*(\int_{-\infty}^{\xi_p}{f^2(x)F(x)dx}-(p/2)\int_{-\infty}^{\xi_p}{f^2(x)dx})/(p\int_{-\infty}^{\xi_p}{f^3(x)dx-(\int_{-\infty}^{\xi_p}{f^2(x)dx})^2})^(1/2)}
+\deqn{
+\frac{ 2\sqrt{3}}{p} \frac{-\int_{-\infty}^{\xi_p} f^2(x)F(x)\,dx  - \frac{p}{2}\int_{-\infty}^{\xi_p}  f^2(x)\,dx}{ \left \{ p\int_{-\infty}^{\xi_p}  f^3(x)\,dx-(\int_{-\infty}^{\xi_p}  f^2(x)\,dx)^2 \right \}^{1/2} } }
 
   defined on page 6 \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil, Bagkavos and Wood}, see also (4) in \href{https://link.springer.com/chapter/10.1007/978-3-319-41582-6_1}{Bagkavos, Patil and Wood} . This implementation uses exact calculation of the functionals in the definition of \eqn{\rho_p}.
 
@@ -34,10 +35,9 @@
 
 \references{
   \itemize{
-    \item   \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil, Bagkavos and Wood, A measure of asymmetry based on a new necessary and sufficient condition for symmetry, Sankhya A, 76, 123--145(2014)}
-    \item  \href{https://link.springer.com/chapter/10.1007/978-3-319-41582-6_1}{Bagkavos, Patil and Wood, A Numerical Study of the Power Function of a New Symmetry Test, In: Cao R., González Manteiga W., Romo J. (eds) Nonparametric Statistics. Springer Proceedings in Mathematics & Statistics, vol 175. Springer}
-  }
-}
+    \item   \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil P.N., Bagkavos D. and Wood A.T.A., (2014). A measure of asymmetry based on a new necessary and sufficient condition for symmetry, Sankhya A, 76, 123--145.}
+    \item  \href{https://link.springer.com/chapter/10.1007/978-3-319-41582-6_1}{{Bagkavos D., Patil P.N., Wood A.T.A. (2016), A Numerical Study of the Power Function of a New Symmetry Test. In: Cao R., Gonzalez Manteiga W., Romo J. (eds) Nonparametric Statistics. Springer Proceedings in Mathematics and Statistics, vol 175, Springer.}
+  }}}
 
 
 \author{

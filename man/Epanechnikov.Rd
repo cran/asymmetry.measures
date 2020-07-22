@@ -18,8 +18,8 @@
 \details{
   Implements:
 
-\deqn{K(u)= (3/4)*(1-((x^2)/5 ))/\sqrt{5} }
-for \eqn{|x|<=\sqrt{5}}
+\deqn{K(u)= \frac{3}{4\sqrt{5}} \left (1-\frac{x^2}{5} \right )  }
+for \eqn{|x| \le \sqrt{5}}
 }
 
 \value{

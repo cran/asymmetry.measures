@@ -2,7 +2,7 @@
 \alias{d.sample}
 
 
-\title{Switch between a range of available probability density functions.}
+\title{Switch between a range of probability density functions.}
 
 \description{Returns the user-specified  probability density function out of a range of available options evaluated at selected grid points.}
 
@@ -19,30 +19,49 @@
 
 Supported distributions (along with the corresponding \code{dist} values) are:
 
-  \itemize{
-  \item{weib:}{The weibull distribution is implemented as \deqn{f(s;p1,p2)= (p1/p2) (s/p2)^(p1-1) exp(- (s/p2)^p1) with s>=0} where \eqn{p1} is the shape parameter and \eqn{p2} the scale parameter.}
-  \item{lognorm:}{The lognormal distribution is implemented as \deqn{f(s) = 1/(\sqrt(2*\pi)*p2*s)*e^-((log s -p1)^2 /(2*p2^2))} where \eqn{p1} is the mean and \eqn{p2} is the sd parameters.}
-  \item{norm:}{The normal distribution is implemented as \deqn{f(s) = 1/(\sqrt(2*\pi)*p2)*e^-((s - p1)^2/(2*p2^2))} where \eqn{p1} is the mean and the \eqn{p2} is the sd parameters.}
-  \item{uni:}{The uniform distribution is implemented as \deqn{f(s) = 1/(p2-p1) for p1 <= s <= p2} where \eqn{min=p1} and \eqn{max=p2}.}
-   \item{cauchy:}{The cauchy distribution is implemented as \deqn{f(s)=(1\pi*p2)*(1+((s-p1)/p2)^2)^{-1}} where \eqn{p1} is the location parameter  and \eqn{p2} the scale parameter.}
-  \item{fnorm:}{The half normal distribution is implemented as \deqn{2*f(s)-1} where \deqn{f(s) = 1/(\sqrt(2*\pi)*sd)*e^-((s)^2/(2*sd^2))},\eqn{mean=0} and \eqn{sd=sqrt(pi/2)/p1}.}
-  \item{normmixt:}{The normal mixture distribution is implemented as \deqn{f(s)=p1*(1/(\sqrt(2*\pi)*p2[2])*e^-((s - p2[1])^2/(2*p2[2]^2)))+(1-p1)*(1/(\sqrt(2*\pi)*p2[4])*e^-((s - p2[3])^2/(2*p2[4]^2))} where \eqn{p1}is a mixture component(scalar) and \eqn{p2} a vector of parameters for the mean and variance of the two mixture components \eqn{p2=c(mean1,sd1,mean2,sd2)}.}
-    \item{skewnorm:}{The skew normal distribution with parameter \eqn{p1} is implemented as \deqn{f(s)=2\phi(s)\Phi(p1*s)}.}
-    \item{fas:}{The Fernandez and Steel distribution is implemented as \deqn{f(s;p1,p2) = (2/(p1+1/p1)*[f_t(s/p1;p2)*I{s>=0} + f_t(p1*s;p2)*I{s<0}]} where \eqn{f_t(x;\nu)} is the p.d.f. of the t distribution with \eqn{\nu = 5} degrees of freedom.\eqn{p1} control the skewness of the distribution with values between \eqn{(0,+\infty)} and \eqn{p2} is the degrees of freedom.}
-  \item{shash:}{The Sinh-Arcsinh distribution is implemented as \deqn{f(s;\mu,p2,-p1,\tau) = (c*e^{-r^2/2}/(\sqrt(2*\pi)))*(1/p2)*(1/2*(1+z^2)^(1/2))} where \eqn{r=sinh(sinh(z)-(-p1))}
-  , \eqn{c=cosh(sinh(z)-(-p1))} and \eqn{z=((s-\mu)/p2)}. \eqn{-p1} is the vector of skewness,\eqn{p2}is the scale parameter,\eqn{\mu=0} is the location parameter and \eqn{\tau=1} the kurtosis parameter.}
-  }}
+\itemize{
+\item{weib: }{The weibull distribution is implemented as \deqn{f(s;p_1,p_2)= \frac{p_1}{p_2} \left (\frac{s}{p_2}\right )^{p_1-1} \exp \left \{- \left (\frac{s}{p_2}\right )^{p_1} \right \} } with \eqn{ s \ge 0} where \eqn{p_1} is the shape parameter and \eqn{p_2} the scale parameter.}
+
+ \item{lognorm: }{The lognormal distribution is implemented as \deqn{f(s) = \frac{1}{p_2s\sqrt{2\pi}}e^{-\frac{(log s -p_1)^2}{2p_2^2}}} where \eqn{p_1} is the mean and \eqn{p_2} is the standard deviation of the distirbution.}
+
+\item{norm: }{The normal distribution is implemented as \deqn{f(s) = \frac{1}{p_2\sqrt{2 \pi}}e^{-\frac{ (s - p_1)^2 }{ 2p_2^2 }}} where \eqn{p_1} is the mean and the \eqn{p_2} is the standard deviation of the distirbution.}
+
+\item{uni: }{The uniform distribution is implemented as \deqn{f(s) = \frac{1}{p_2-p_1}} for \eqn{ p_1 \le s \le p_2}.}
+
+\item{cauchy: }{The cauchy distribution is implemented as
+\deqn{f(s)=\frac{1}{\pi p_2 \left \{1+( \frac{s-p_1}{p_2})^2\right \} } }
+where \eqn{p_1} is the location parameter  and \eqn{p_2} the scale parameter.}
+
+\item{fnorm: }{The half normal distribution is implemented as \deqn{2 f(s)-1} where \deqn{f(s) = \frac{1}{sd\sqrt{2 \pi} }e^{-\frac{s^2}{2 sd^2 }},} and \eqn{sd=\sqrt{\pi/2}/p_1}.}
+
+\item{normmixt:}{The normal mixture distribution is implemented as
+
+\deqn{f(s)=p_1\frac{1}{p_2[2] \sqrt{2\pi} }  e^{- \frac{ (s - p_2[1])^2}{2p_2[2]^2}} +(1-p_1)\frac{1}{p_2[4]\sqrt{2\pi}} e^{-\frac{(s - p_2[3])^2}{2p_2[4]^2 }} }
+
+where \eqn{p1} is a mixture component(scalar) and \eqn{p_2} a vector of parameters for the mean and variance of the two mixture components \eqn{p_2= c(mean1, sd1, mean2, sd2)}.}
+
+\item{skewnorm: }{The skew normal distribution with parameter \eqn{p_1} is implemented as \deqn{f(s)=2\phi(s)\Phi(p_1s)}.}
+
+\item{fas: }{The Fernandez and Steel distribution is implemented as
+\deqn{f(s; p_1, p_2) = \frac{2}{p_1+\frac{1}{p_1}} \left \{ f_t(s/p_1; p_2) I_{\{s \ge 0\}} + f_t(p_1s; p_2)I_{\{s<0 \}}\right \} }
+where \eqn{f_t(x;\nu)} is the p.d.f. of the \eqn{t} distribution with \eqn{\nu = 5} degrees of freedom. \eqn{p_1} controls the skewness of the distribution with values between \eqn{(0, +\infty)} and \eqn{p_2} denotes the degrees of freedom.}
+
+\item{shash: }{The Sinh-Arcsinh distribution is implemented as
+\deqn{f(s;\mu, p_1, p_2, \tau) = \frac{ce^{-r^2/2}}{\sqrt{2\pi }} \frac{1}{p_2} \frac{1}{2} \sqrt{1+z^2} }
+where \eqn{r=\sinh(\sinh(z)-(-p_1))}, \eqn{c=\cosh(\sinh(z)-(-p_1))} and \eqn{z=((s-\mu)/p2)}. \eqn{p_1} is the vector of skewness, \eqn{p_2} is the scale parameter, \eqn{\mu=0} is the location parameter and \eqn{\tau=1} the kurtosis parameter.}
+}
+}
 
 \value{A vector containing the user selected density values at the user specified points \code{s}.}
 
 \references{
-   \href{https://link.springer.com/chapter/10.1007\%2F978-3-319-41582-6_1}{D. Bagkavos, P.N. Patil and A.T.A. Wood, "A Numerical Study of the Power Function of a New Symmetry Test"}
-    }
+    \href{https://link.springer.com/chapter/10.1007/978-3-319-41582-6_1}{{Bagkavos D., Patil P.N., Wood A.T.A. (2016), A Numerical Study of the Power Function of a New Symmetry Test. In: Cao R., Gonzalez Manteiga W., Romo J. (eds), Nonparametric Statistics. Springer Proceedings in Mathematics and Statistics, vol 175, Springer.}
+    }}
 
 \author{
 Dimitrios Bagkavos and Lucia Gamez Gallardo
 
-R implementation and documentation: Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com> ,Lucia Gamez Gallardo <gamezgallardolucia@gmail.com>
+R implementation and documentation: Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com>, Lucia Gamez Gallardo <gamezgallardolucia@gmail.com>
   }
 
 

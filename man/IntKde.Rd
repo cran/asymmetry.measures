@@ -22,12 +22,12 @@
 \details{
  It implements the classical density integrated kernel estimator.
 
- Let \eqn{X_1,X_2,.., X_n} be a univariate independent and identically distributed sample drawn from some unknown distribution function  \eqn{F}.  Its kernel density estimator is
+ Let \eqn{X_1,X_2,\dots, X_n} be a univariate independent and identically distributed sample drawn from some unknown distribution function  \eqn{F}.  Its kernel density estimator is
 
- \deqn{\hat{F}(x)=  n^{-1}\sum_{i=1}^n K((x-x_i)/h))}
+ \deqn{\hat{F}(x)=  n^{-1}\sum_{i=1}^n K\left \{ (x-X_i)h^{-1}\right \}}
 
 
-where K is an integrated kernel, and \eqn{h > 0}  is a smoothing parameter called the bandwidth.
+where \eqn{K} is an integrated kernel, and \eqn{h > 0}  is a smoothing parameter called the bandwidth.
 
 }
 
@@ -36,7 +36,7 @@ Returns a vector with the estimate of the distribution function at the user spec
 }
 
 \references{
-  \href{https://academic.oup.com/biomet/article/85/4/799/251730}{Bowman, A., Hall, P., and Prvan, T. Bandwidth Selection for the Smoothing of Distribution Functions. (1998).}
+  \href{https://academic.oup.com/biomet/article/85/4/799/251730}{Bowman, A., Hall, P., and Prvan, T., (1998), Bandwidth Selection for the Smoothing of Distribution Functions,  Biometrika, 799-808.}
   }
 
   \author{
@@ -48,7 +48,7 @@ Returns a vector with the estimate of the distribution function at the user spec
 
 
  \seealso{
-    \code{\link{bw.nrd}},\code{\link{bw.nrd0}},\code{\link{bw.ucv}},\code{\link{bw.bcv}}
+    \code{\link{bw.nrd}}, \code{\link{bw.nrd0}}, \code{\link{bw.ucv}}, \code{\link{bw.bcv}}
     }
 
 \examples{

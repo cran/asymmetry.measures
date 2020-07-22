@@ -2,9 +2,9 @@ Encoding: UTF-8
 Package: asymmetry.measures
 Type: Package
 Title: Asymmetry Measures for Probability Density Functions
-Version: 0.1
+Version: 0.2
 URL:
-Date: 2020-06-01
+Date: 2020-07-22
 Authors@R: c(person("Dimitrios", "Bagkavos", role = c("aut", "cre"), email = "dimitrios.bagkavos@gmail.com"), person("Lucia","Gamez", role = c("aut") ,email = "gamezgallardolucia@gmail.com" ))
 Maintainer: Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com>
 Depends: R (>= 3.5.0)
@@ -14,8 +14,8 @@ License: GPL (>= 2)
 NeedsCompilation: no
 RoxygenNote: 6.1.0
 LazyData: true
-Packaged: 2020-06-14 20:41:37 UTC; Dimitris
+Packaged: 2020-07-22 04:45:06 UTC; Dimitris
 Author: Dimitrios Bagkavos [aut, cre],
   Lucia Gamez [aut]
 Repository: CRAN
-Date/Publication: 2020-06-22 09:30:03 UTC
+Date/Publication: 2020-07-22 05:00:03 UTC

@@ -21,8 +21,8 @@
 
   Implements:
 
-\deqn{K(u)= \int_{-Inf}^{u}{(3/4)*(1-((x^2)/5 ))/\sqrt{5} dx}}
-for \eqn{|x|<=\sqrt{5}}
+\deqn{K(u)= \int_{-\infty}^u \frac{3}{4\sqrt{5}} \left (1-\frac{x^2}{5} \right )\,dx}
+for \eqn{|x| \le \sqrt{5}}
 
 }
 

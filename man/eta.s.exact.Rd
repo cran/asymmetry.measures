@@ -4,7 +4,7 @@
 
 \title{Strong asymmetry measure \eqn{eta(X)}.}
 
-\description{Returns the strong asymmetry measure \eqn{eta(X)} of \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil, Bagkavos and Wood}.
+\description{Returns the strong asymmetry measure \eqn{eta(X)} of \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil, Bagkavos and Wood (2014)}.
 }
 
 \usage{
@@ -21,7 +21,7 @@
 
 \details{
   Implements
-  \deqn{\eta(X)= -0.5*sign(\rho_1)*max(abs(\rho_p + \rho_p^*))} with \eqn{1/2 <= p <= 1}
+  \deqn{\eta(X)= -0.5 sign(\rho_1)\max|\rho_p + \rho_p^*|} with \eqn{1/2 \le p \le 1}
   This version uses exact p.d.f. and c.d.f. evaluation and not estimates of the unknown functionals.}
 
 
@@ -29,9 +29,9 @@
 
 \references{
   \itemize{
-    \item   \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil, Bagkavos and Wood, A measure of asymmetry based on a new necessary and sufficient condition for symmetry, Sankhya A, 76, 123--145(2014)}
-    \item  \href{https://link.springer.com/chapter/10.1007/978-3-319-41582-6_1}{Bagkavos, Patil and Wood, A Numerical Study of the Power Function of a New Symmetry Test, In: Cao R., González Manteiga W., Romo J. (eds) Nonparametric Statistics. Springer Proceedings in Mathematics & Statistics, vol 175. Springer}
-  }}
+    \item   \href{https://link.springer.com/article/10.1007/s13171-013-0034-z}{Patil P.N., Bagkavos D. and Wood A.T.A., (2014). A measure of asymmetry based on a new necessary and sufficient condition for symmetry, Sankhya A, 76, 123--145.}
+    \item  \href{https://link.springer.com/chapter/10.1007/978-3-319-41582-6_1}{{Bagkavos D., Patil P.N., Wood A.T.A. (2016), A Numerical Study of the Power Function of a New Symmetry Test. In: Cao R., González Manteiga W., Romo J. (eds) Nonparametric Statistics. Springer Proceedings in Mathematics and Statistics, vol 175, Springer.}
+  }}}
 
 
 \author{

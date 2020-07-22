@@ -32,7 +32,7 @@ where \eqn{h} is determined by  a bandwidth selector such as Silverman's default
 A vector with the density estimates at the designated points xout. }
 
 \references{
-  \href{https://www.routledge.com/Density-Estimation-for-Statistics-and-Data-Analysis-1st-Edition/Silverman-Cox-Reid-Isham-Tibshirani-Louis-Tong-Keiding/p/book/9780412246203}{Silverman,B.W.(1986) Density Estimation for Statistics and Data Analysis.}
+  \href{https://www.routledge.com/Density-Estimation-for-Statistics-and-Data-Analysis-1st-Edition/Silverman-Cox-Reid-Isham-Tibshirani-Louis-Tong-Keiding/p/book/9780412246203}{Silverman, B.W. (1986), Density Estimation for Statistics and Data Analysis, Chapman and Hall, London.}
   }
 
 

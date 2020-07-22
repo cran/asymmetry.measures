@@ -14,21 +14,23 @@
 }
 
 \details{ The empirical distribution function estimator at \eqn{x} is defined as the number of observations up to \eqn{x}, divided by \eqn{n}, i.e.
-    \deqn{ F_{n}(x) = \frac{\# of X_{1},..,X_{n}<= x}{n}}.
+    \deqn{ F_{n}(x) = \frac{\# \{ X_{1},..,X_{n}\} \le x}{n}}.
 }
 
 
 \value{A vector with the estimated distribution function at \code{xout}.}
 
 \references{
-  \href{https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119196037}{Hollander, M. & Wolfe,D.A. (1999) Nonparametric Statistical Methods, 2nd edition}
+  \href{https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119196037}{Hollander, M. abd Wolfe, D.A. (1999), Nonparametric Statistical Methods, 2nd edition, Wiley.}
   }
 
 
 \author{
  Dimitrios Bagkavos and Lucia Gamez Gallardo
 
-R implementation and documentation: Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com> , Lucia Gamez Gallardo <gamezgallardolucia@gmail.com>
+R implementation and documentation:
+
+Dimitrios Bagkavos <dimitrios.bagkavos@gmail.com> , Lucia Gamez Gallardo <gamezgallardolucia@gmail.com>
 }
 
 

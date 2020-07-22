@@ -17,13 +17,12 @@ Implements the asymmetry coefficient \eqn{\tilde{\eta}} of \href{https://link.sp
 }
 
 \details{
-Given a sample \eqn{X_1, X_2, . . . , X_n} from a continuous density function \eqn{f(x)} and distribution function \eqn{F(x)}. \eqn{\tilde{\eta}} is defined by \deqn{\tilde{\eta}=-\frac{\sum^{n}_{i=1}{U_i*V_i}-(n/2)*\bar{U}}{\sqrt{(n/12)*(\sum^{n}_{i=1}{U_i^2-n*\bar{U^2}})}}}
+Given a sample \eqn{X_1, X_2,\dots, X_n} from a continuous density function \eqn{f(x)} and distribution function \eqn{F(x)}. \eqn{\tilde{\eta}} is defined by
+\deqn{\tilde{\eta}=-\frac{\sum_{i=1}^n{U_iV_i}-(n/2)\bar{U}}{\sqrt{(n/12)(\sum_{i=1}^n{U_i^2-n\bar{U^2}})}}}
 
-  where
 
 where
-\eqn{U_i = \hat{f}(X_i)}, \eqn{V_i =F(X_i)}, \eqn{\bar{U}=\sum^{n}_{i=1}{\frac{U_i}{n}}}
-  and \eqn{\bar{V}=\sum^{n}_{i=1}{\frac{V_i}{n}}}.
+\deqn{U_i = \hat{f}(X_i), \; V_i =F(X_i), \;  \bar{U}=n^{-1}\sum_{i=1}^n U_i,  \; \bar{V}=n^{-1}\sum_{i=1} V_i.}
 }
 
 
@@ -35,7 +34,7 @@ where
 
 
 \references{
-  \href{https://link.springer.com/article/10.1007/s00362-011-0401-6}{Patil, Patil and Bagkavos (2012): A measure of asymmetry}
+  \href{https://link.springer.com/article/10.1007/s00362-011-0401-6}{Patil, P.N., Patil, P.P. and Bagkavos, D., (2012), A measure of asymmetry. Stat. Papers, 53, 971-985.}
     }
 
 
